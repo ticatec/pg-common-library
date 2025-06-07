@@ -1,0 +1,32 @@
+{
+  "name": "@ticatec/pg-common-library",
+  "version": "2.0.3",
+  "description": "A set of common classes for node express apps.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "rm -rf ./lib && tsc",
+    "publish:public": "npm publish --access public"
+  },
+  "keywords": [
+    "ticatec",
+    "common",
+    "database",
+    "utils"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ticatec/pg-common-library.git"
+  },
+  "author": "Henry Feng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ticatec/pg-common-library/issues"
+  },
+  "homepage": "https://github.com/ticatec/pg-common-library",
+  "devDependencies": {
+    "log4js": "^6.7.0",
+    "pg": "^8.8.0",
+    "@ticatec/node-common-library": "^2.1.1"
+  }
+}
