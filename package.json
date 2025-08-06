@@ -1,32 +1,84 @@
 {
   "name": "@ticatec/pg-common-library",
-  "version": "2.0.3",
-  "description": "A set of common classes for node express apps.",
+  "version": "2.1.1",
+  "description": "A PostgreSQL database connection and connection pool implementation for Node.js applications, built on the pg driver and designed to work seamlessly with @ticatec/node-common-library database interfaces.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "module": "lib/index.js",
+  "files": [
+    "lib/**/*",
+    "README.md",
+    "README_CN.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "rm -rf ./lib && tsc",
-    "publish:public": "npm publish --access public"
+    "clean": "rm -rf ./lib",
+    "prepublishOnly": "npm run build",
+    "publish:public": "npm publish --access public",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typecheck": "tsc --noEmit",
+    "dev": "tsc --watch"
   },
   "keywords": [
     "ticatec",
-    "common",
+    "postgresql",
+    "postgres",
+    "pg",
     "database",
-    "utils"
+    "db",
+    "connection",
+    "pool",
+    "transaction",
+    "orm",
+    "sql",
+    "typescript",
+    "nodejs",
+    "common",
+    "library",
+    "factory"
   ],
   "repository": {
-    "type": "git",
+    "type": "https",
     "url": "https://github.com/ticatec/pg-common-library.git"
   },
-  "author": "Henry Feng",
+  "author": {
+    "name": "Henry Feng",
+    "email": "huili.f@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Henry Feng",
+      "email": "huili.f@gmail.com",
+      "url": "https://github.com/henryfeng"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ticatec/pg-common-library/issues"
   },
-  "homepage": "https://github.com/ticatec/pg-common-library",
+  "homepage": "https://github.com/ticatec/pg-common-library#readme",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "peerDependencies": {
+    "pg": "^8.8.0",
+    "@ticatec/node-common-library": "^2.2.0",
+    "log4js": "^6.7.0"
+  },
   "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/pg": "^8.10.0",
     "log4js": "^6.7.0",
     "pg": "^8.8.0",
-    "@ticatec/node-common-library": "^2.1.1"
+    "@ticatec/node-common-library": "^2.2.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }
