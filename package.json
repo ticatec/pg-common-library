@@ -1,6 +1,6 @@
 {
   "name": "@ticatec/pg-common-library",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "A PostgreSQL database connection and connection pool implementation for Node.js applications, built on the pg driver and designed to work seamlessly with @ticatec/node-common-library database interfaces.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

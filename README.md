@@ -1,8 +1,11 @@
 # @ticatec/pg-common-library
 
-## [[中文文档](./README_CN.md)]
+[![Version](https://img.shields.io/npm/v/@ticatec/pg-common-library)](https://www.npmjs.com/package/@ticatec/pg-common-library)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A PostgreSQL database connection and connection pool implementation for Node.js applications, built on the `pg` driver and designed to work seamlessly with the [`@ticatec/node-common-library`](https://www.npmjs.com/package/@ticatec/node-common-library) database interfaces.
+
+[中文](./README_CN.md) ｜ English
 
 ## Features
 

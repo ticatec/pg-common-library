@@ -1,6 +1,11 @@
 # @ticatec/pg-common-library
 
+[![Version](https://img.shields.io/npm/v/@ticatec/pg-common-library)](https://www.npmjs.com/package/@ticatec/pg-common-library)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 这是一个专为 Node.js 应用程序设计的 PostgreSQL 数据库连接和连接池实现，基于 `pg` 驱动构建，与 [`@ticatec/node-common-library`](https://www.npmjs.com/package/@ticatec/node-common-library) 数据库接口无缝集成。
+
+[English](./README.md) ｜ 中文
 
 ## 功能特性
 
