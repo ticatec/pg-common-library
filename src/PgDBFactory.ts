@@ -205,6 +205,8 @@ class PgDBConnection extends DBConnection {
     }
 }
 
+export type PostConnection = (client: PoolClient) => Promise<void>;
+
 /**
  * PostgreSQL database factory implementation
  * Implements the DBFactory interface to provide PostgreSQL database connections
@@ -220,9 +222,15 @@ class PgDBFactory implements DBFactory {
     /**
      * Creates a new PostgreSQL database factory
      * @param {any} config - PostgreSQL connection configuration
+     * @param postConnection
      */
-    constructor(config: any) {
+    constructor(config: any, postConnection: PostConnection) {
         this.#pool = new Pool(config);
+        if (postConnection) {
+            this.#pool.on('connect', async (client: PoolClient) => {
+                await postConnection(client)
+            })
+        }
     }
 
     /**
@@ -238,9 +246,10 @@ class PgDBFactory implements DBFactory {
 /**
  * Initializes a PostgreSQL database factory
  * @param {any} config - PostgreSQL connection configuration
+ * @param postConnection
  * @returns {DBFactory} New PostgreSQL database factory instance
  */
-export const initializePg = (config: any): DBFactory => {
-    return new PgDBFactory(config);
+export const initializePg = (config: any, postConnection: PostConnection = null): DBFactory => {
+    return new PgDBFactory(config, postConnection);
 }
 
